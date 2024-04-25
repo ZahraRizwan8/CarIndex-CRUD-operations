@@ -1,0 +1,399 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header{
+   width: 100%;
+   padding: 0px 30px;
+   background-color: #EE534F;
+}
+
+.header h5{
+    font-weight: bold;
+    font-family: verdana;
+    font-size: 28px;
+    color: #fff;
+}
+
+.upper-btn-box{
+    width: 100%;
+    height: 100px;
+    display:flex;
+    padding: 30px;
+}
+
+.upper-btn-box .left-box{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.upper-btn-box .left-box input[type="checkbox"]{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+} 
+
+.upper-btn-box .left-box button,.upper-btn-box .right-box button{
+    border: none;
+    outline:none;
+    background-color: #4286F5;
+    padding: 13px;
+    font-size: 18px;
+    font-family: vardana;
+    color:#fff;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.upper-btn-box .right-box {
+    width: 50%;
+    height: 100%;
+
+ }
+
+.upper-btn-box .right-box i{
+   font-size: 25px;
+   color:#4286F5;
+   padding: 10px;
+}
+
+.upper-btn-box .right-box input{
+    width: 50%;
+    padding: 13px;
+    outline:none;
+    border:none;
+    border-bottom: 3px solid #4286F5;
+    font-size: 16px;
+    font-family: vardana;
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    width: calc(33.33% - 20px); /* Adjust the width as needed */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: hsla(2, 82%, 62%, 1);
+    background: linear-gradient(90deg, hsla(2, 82%, 62%, 1) 0%, hsla(347, 75%, 61%, 1) 19%, hsla(217, 90%, 61%, 1) 92%);
+    background: -moz-linear-gradient(90deg, hsla(2, 82%, 62%, 1) 0%, hsla(347, 75%, 61%, 1) 19%, hsla(217, 90%, 61%, 1) 92%);
+    background: -webkit-linear-gradient(90deg, hsla(2, 82%, 62%, 1) 0%, hsla(347, 75%, 61%, 1) 19%, hsla(217, 90%, 61%, 1) 92%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EE534F", endColorstr="#E64F6F", GradientType=1 );
+    
+  }
+  
+  .card-content {
+    padding: 20px; /* You can adjust this value to increase or decrease the padding around the content */
+    color: white;
+    font-family: Arial, sans-serif; /* Set the desired font family */
+   /* font-weight: bold;*/
+}
+
+.card-content p,
+.card-content h2,
+.card-content h3,
+.card-content h4,
+.card-content h5,
+.card-content h6 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+  
+  .profile-image {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .profile-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .details {
+    font-size: 18px;
+  }
+  
+  .card-actions {
+    display: flex;
+    justify-content: space-between;
+    padding:10px 20px;
+  }
+  
+  .card-actions button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 18px;
+  }
+  
+  .card-actions button i {
+    font-size: 20px;
+  }
+
+.modal{
+    width: 0%;
+    height: auto;
+    background-color: #f2f2f2; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display:flex;
+    border-top: 20px groove #4286F5;
+    opacity: 0;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+
+.modal.active{
+    opacity: 1;
+    z-index: 1;
+    width: 60%;
+}
+
+
+.modal .close-icon{
+    position: absolute;
+    right: -30px ;
+    top: -45px;
+    font-size: 30px;
+    padding: 10px;
+    color: #EE534F;
+}
+
+.modal .left-modal{
+    width: 30%;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+.modal .left-modal .img-box{
+    width: 100%;
+    height: 300px;
+    display:flex;
+    padding:30px;
+    position: relative;
+}
+
+.modal .left-modal .img-box input{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 40px;
+    top: 90px;
+    opacity: 0;
+}
+
+.modal .left-modal .img-box i{
+    font-size: 30px;
+    padding: 10px;
+    position: absolute;
+    right: 40px;
+    top: 90px;
+    color:#4286F5;
+}
+
+.modal .left-modal .img-box img{
+    border-radius: 10px;
+}
+
+.modal .right-modal{
+    width: 70%;
+    height: 100%;
+    border-left:5px groove #4286F5;
+    padding: 30px;
+}
+
+.modal .right-modal .input-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal .right-modal .input-box label{
+    font-size: 22px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: 20px 0px;
+}
+
+.modal .right-modal .input-box input{
+    width: 70%;
+    margin: 10px 0px;
+    border: none;
+    padding: 13px;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 3px solid #4286F5;
+    font-size: 18px;
+}
+
+.modal .right-modal .input-box button{
+    width: 48%;
+    border: none;
+    outline:none;
+    background-color: #4286F5;
+    padding: 13px;
+    font-size: 18px;
+    font-family: vardana;
+    color:#fff;
+    margin: 10px 10px;
+}
+
+.modal .right-modal .input-box button:disabled{
+   filter: grayscale(80%);
+}
+
+
+.theme-selector {
+    position: relative;
+    z-index: 1; /* Ensure it's above the video background */
+    color: #fff; /* Adjust text color to be visible on video background */
+    margin-top: 20px;
+}
+
+#video-background {
+    display:none;
+}
+
+#video-background-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    display: none; /* Initially hide the rain video */
+  }
+
+
+.theme-wind #video-background { 
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    background-size: cover;
+    display: block;
+}
+
+.theme-rain #video-background
+{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    background-size: cover;
+    display: block;
+}
+
+#video-background-sunny {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+    display: none; /* Initially hide the sunny video */
+  }
+  
+  .theme-sunny #video-background-sunny {
+    display: block;
+  }
+
+.theme-wind .header {
+    background-color: #ccc;
+}
+
+.theme-sunny .header {
+    background-color: #568591;
+}
+
+.theme-wind .header h5,
+.theme-rain .header h5,
+.theme-sunny .header h5{
+    color : #000;
+}
+
+
+.theme-wind .upper-btn-box .left-box button#add-btn,
+.theme-wind .upper-btn-box .right-box button#search-btn {
+    background-color: #EE534F;
+}
+
+.theme-rain .upper-btn-box .left-box button#add-btn,
+.theme-rain .upper-btn-box .right-box button#search-btn {
+    background-color:#54975c;
+}
+
+.theme-wind .upper-btn-box .left-box button#del-all-btn {
+    background-color: #cccccc;
+}
+
+.theme-wind .card{
+    width: calc(33.33% - 20px); /* Adjust the width as needed */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgb(186,167,167);
+    background: linear-gradient(90deg, rgba(186,167,167,1) 2%, rgba(238,83,79,1) 100%, rgba(238,83,79,1) 100%);
+}
+
+.theme-rain .card{
+    width: calc(33.33% - 20px); /* Adjust the width as needed */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgb(186,167,167);
+    background: linear-gradient(90deg, rgba(186,167,167,1) 0%, rgba(84,151,92,1) 100%, rgba(48,146,66,1) 100%);
+}
+
+
+.theme-wind .upper-btn-box .left-box button,
+.theme-wind .upper-btn-box .right-box button {
+    background-color: #3399ff;
+}
+
+.theme-rain .header {
+    background-color: #cccccc;
+}
+
+.theme-rain .upper-btn-box .left-box button,
+.theme-rain .upper-btn-box .right-box button {
+    background-color: #999999;
+}
+
+.theme-Sunny .header {
+    background-color: #ffff00;
+}
+
+.theme-Sunny .upper-btn-box .left-box button,
+.theme-Sunny .upper-btn-box .right-box button {
+    background-color: #ff6600;
+}

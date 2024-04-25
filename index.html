@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <title>EMPLOYEE</title>
+</head>
+<body>
+    <div class="theme-selector">
+        <label for="theme">Select Theme:</label>
+        <select id="theme">
+            <option value="default">Default</option>
+            <option value="wind">Wind</option>
+            <option value="rain">Rain</option>
+            <option value="sunny">Sunny</option>
+        </select>
+    </div>
+  <div class="header">
+    <h5>CARD INDEX</h5>
+  </div>
+  <div class="upper-btn-box">
+    <div class="left-box">
+      <button id="add-btn"><i class="fa fa-plus"></i> &nbsp; Add Card</button>
+      <button id="del-all-btn" style="background-color: #33B5E6;"><i class="fa fa-eraser"></i> &nbsp; Clear All</button>
+      <input type="checkbox" name="" id="del-all-box">
+    </div>
+    <div class="right-box">
+      <i class="fa fa-search"></i>
+      <input type="text" id="empId" placeholder="Enter Search Info">
+      <button id="search-btn">Search</button>
+    </div>
+  </div>
+  <div class="card-container" id="card-container">
+  </div>
+  <div class="modal">
+    <i class="fa fa-times-circle close-icon"></i>
+    <div class="left-modal">
+      <div class="img-box">
+        <img src="C:/Users/Zahra/Pictures/unknown1.jpg" id="profile-pic" width="150" height="150" alt="">
+        <i class="fa fa-plus"></i>
+        <input type="file" id="upload-feild">
+      </div>
+    </div>
+    <div class="right-modal">
+      <form id="register-form">
+        <div class="input-box">
+          <label for="date">Date</label>
+          <input type="date" required id="date">
+        </div>
+
+        <div class="input-box">
+          <label for="time">Time</label>
+          <input type="time" required id="time">
+        </div>
+
+        <div class="input-box">
+          <label for="title">Title</label>
+          <input type="text" required id="title">
+        </div>
+
+        <div class="input-box">
+          <label for="description">Description</label>
+          <textarea type="text" required id="description"></textarea> <!-- Added closing tag for textarea -->
+        </div>
+
+        <div class="input-box">
+          <label for="event">Event</label>
+          <input type="text" required id="event">
+        </div>
+
+        <div class="input-box">
+          <label for="nearest-place">Nearest Place</label>
+          <input type="text" required id="nearest-place">
+        </div>
+
+        <div class="input-box">
+          <button id="register-btn">Register</button>
+          <button id="update-btn" disabled="disabled" style="background-color: #EE534F;">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <video autoplay muted loop id="video-background" >
+    <source src="C:\Users\Zahra\Downloads\wind.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <video autoplay muted loop id="video-background-rain">
+    <source src="C:\Users\Zahra\Downloads\rain.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <video autoplay muted loop id="video-background-sunny">
+    <source src="C:\Users\Zahra\Downloads\sunny.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <script src="index.js"></script>
+</body>
+</html>
